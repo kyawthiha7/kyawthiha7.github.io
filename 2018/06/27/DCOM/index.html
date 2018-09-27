@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Diggin’ aroung DCOM (Distributed Component Object Model) Set of Microsoft concepts and program interfaces client object can request to server work withing network using TCP/IP replace of OLE extend CO">
+<meta name="keywords" content="Red Team,Windows">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DCOM">
+<meta property="og:url" content="http://yoursite.com/2018/06/27/DCOM/index.html">
+<meta property="og:site_name" content="kth&#39;s lab">
+<meta property="og:description" content="Diggin’ aroung DCOM (Distributed Component Object Model) Set of Microsoft concepts and program interfaces client object can request to server work withing network using TCP/IP replace of OLE extend CO">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/2018/06/27/DCOM/dcom.PNG">
+<meta property="og:image" content="http://yoursite.com/2018/06/27/DCOM/dcom2.PNG">
+<meta property="og:updated_time" content="2018-09-27T16:17:11.452Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DCOM">
+<meta name="twitter:description" content="Diggin’ aroung DCOM (Distributed Component Object Model) Set of Microsoft concepts and program interfaces client object can request to server work withing network using TCP/IP replace of OLE extend CO">
+<meta name="twitter:image" content="http://yoursite.com/2018/06/27/DCOM/dcom.PNG">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>DCOM</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">AllIHave</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2018/06/27/Persistent/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2018/05/27/Bypass-UAC/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2018/06/27/DCOM/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2018/06/27/DCOM/&text=DCOM"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2018/06/27/DCOM/&title=DCOM"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2018/06/27/DCOM/&is_video=false&description=DCOM"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=DCOM&body=Check out this article: http://yoursite.com/2018/06/27/DCOM/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2018/06/27/DCOM/&title=DCOM"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2018/06/27/DCOM/&title=DCOM"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2018/06/27/DCOM/&title=DCOM"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2018/06/27/DCOM/&title=DCOM"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2018/06/27/DCOM/&name=DCOM&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Diggin’-aroung-DCOM-Distributed-Component-Object-Model"><span class="toc-number">1.</span> <span class="toc-text">Diggin’ aroung DCOM (Distributed Component Object Model)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Protocol-Stack"><span class="toc-number">1.1.</span> <span class="toc-text">Protocol Stack</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Protocol-Overview"><span class="toc-number">1.2.</span> <span class="toc-text">Protocol Overview</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DCOM-Lateral-Movement"><span class="toc-number">1.3.</span> <span class="toc-text">DCOM Lateral Movement</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Why-dcom"><span class="toc-number">1.3.1.</span> <span class="toc-text">Why dcom??</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#prerequisite"><span class="toc-number">1.3.2.</span> <span class="toc-text">prerequisite</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MMC20-application"><span class="toc-number">1.3.3.</span> <span class="toc-text">MMC20.application</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Enumerating-methdo-of-MMC2-application"><span class="toc-number">1.3.4.</span> <span class="toc-text">Enumerating methdo of MMC2.application</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Ref"><span class="toc-number">1.3.5.</span> <span class="toc-text">Ref</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        DCOM
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">kth's lab</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-06-27T10:07:23.000Z" itemprop="datePublished">2018-06-27</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/Red-Team/">Red Team</a>, <a class="tag-link" href="/tags/Windows/">Windows</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Diggin’-aroung-DCOM-Distributed-Component-Object-Model"><a href="#Diggin’-aroung-DCOM-Distributed-Component-Object-Model" class="headerlink" title="Diggin’ aroung DCOM (Distributed Component Object Model)"></a>Diggin’ aroung DCOM (Distributed Component Object Model)</h2><ul>
+<li>Set of Microsoft concepts and program interfaces</li>
+<li>client object can request to server</li>
+<li>work withing network using TCP/IP</li>
+<li>replace of OLE</li>
+<li>extend COM which is only runs in local</li>
+</ul>
+<h3 id="Protocol-Stack"><a href="#Protocol-Stack" class="headerlink" title="Protocol Stack"></a>Protocol Stack</h3><ul>
+<li>Higher Level Appplication</li>
+<li>DCOM</li>
+<li>RPC</li>
+</ul>
+<h3 id="Protocol-Overview"><a href="#Protocol-Overview" class="headerlink" title="Protocol Overview"></a>Protocol Overview</h3><img src="/2018/06/27/DCOM/dcom.PNG">
+<ul>
+<li>client make ORPC object by using higher level application</li>
+<li>server use object resolver and object explorer</li>
+</ul>
+<h3 id="DCOM-Lateral-Movement"><a href="#DCOM-Lateral-Movement" class="headerlink" title="DCOM Lateral Movement"></a>DCOM Lateral Movement</h3><h4 id="Why-dcom"><a href="#Why-dcom" class="headerlink" title="Why dcom??"></a>Why dcom??</h4><ul>
+<li>old use of psexec , schtalk , winrm easy to find out by defenders</li>
+</ul>
+<h4 id="prerequisite"><a href="#prerequisite" class="headerlink" title="prerequisite"></a>prerequisite</h4><ul>
+<li>need domain admin privilege, if you don’t have it , get it done , this is lateral movement.</li>
+</ul>
+<h4 id="MMC20-application"><a href="#MMC20-application" class="headerlink" title="MMC20.application"></a>MMC20.application</h4><ul>
+<li>allow to scripts MMC snap-in operations.</li>
+</ul>
+<h4 id="Enumerating-methdo-of-MMC2-application"><a href="#Enumerating-methdo-of-MMC2-application" class="headerlink" title="Enumerating methdo of MMC2.application"></a>Enumerating methdo of MMC2.application</h4><p><code>[activator]::CreateInstance([type]::GetTypeFromProgID(&quot;MMC2.Application&quot;,&quot;192.168.x.x&quot;))</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">PS C:\WINDOWS\system32&gt; $com = [activator]::CreateInstance([type]::GetTypeFromProgID(&quot;MMC20.Application&quot;,&quot;192.168.1.206&quot;))</span><br><span class="line">PS C:\WINDOWS\system32&gt; $com.Document.ActiveView |get-member</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">   TypeName: System.__ComObject#&#123;6efc2da2-b38c-457e-9abb-ed2d189b8c38&#125;</span><br><span class="line"></span><br><span class="line">Name                          MemberType            Definition</span><br><span class="line">----                          ----------            ----------</span><br><span class="line">Back                          Method                void Back ()</span><br><span class="line">Close                         Method                void Close ()</span><br><span class="line">CopyScopeNode                 Method                void CopyScopeNode (Variant)</span><br><span class="line">CopySelection                 Method                void CopySelection ()</span><br><span class="line">DeleteScopeNode               Method                void DeleteScopeNode (Variant)</span><br><span class="line">DeleteSelection               Method                void DeleteSelection ()</span><br><span class="line">Deselect                      Method                void Deselect (Node)</span><br><span class="line">DisplayScopeNodePropertySheet Method                void DisplayScopeNodePropertySheet (Variant)</span><br><span class="line">DisplaySelectionPropertySheet Method                void DisplaySelectionPropertySheet ()</span><br><span class="line">ExecuteScopeNodeMenuItem      Method                void ExecuteScopeNodeMenuItem (string, Variant)</span><br><span class="line">ExecuteSelectionMenuItem      Method                void ExecuteSelectionMenuItem (string)</span><br><span class="line">ExecuteShellCommand           Method                void ExecuteShellCommand (string, string, string, string)</span><br><span class="line">ExportList                    Method                void ExportList (string, ExportListOptions)</span><br><span class="line">Forward                       Method                void Forward ()</span><br><span class="line">Is                            Method                bool Is (View)</span><br><span class="line">IsSelected                    Method                int IsSelected (Node)</span><br><span class="line">RefreshScopeNode              Method                void RefreshScopeNode (Variant)</span><br><span class="line">RefreshSelection              Method                void RefreshSelection ()</span><br><span class="line">RenameScopeNode               Method                void RenameScopeNode (string, Variant)</span><br><span class="line">RenameSelectedItem            Method                void RenameSelectedItem (string)</span><br><span class="line">Select                        Method                void Select (Node)</span><br><span class="line">SelectAll                     Method                void SelectAll ()</span><br><span class="line">SnapinScopeObject             Method                IDispatch SnapinScopeObject (Variant)</span><br><span class="line">SnapinSelectionObject         Method                IDispatch SnapinSelectionObject ()</span><br><span class="line">ViewMemento                   Method                void ViewMemento (string)</span><br><span class="line">CellContents                  ParameterizedProperty string CellContents (Node, int) &#123;get&#125;</span><br><span class="line">ScopeNodeContextMenu          ParameterizedProperty ContextMenu ScopeNodeContextMenu (Variant) &#123;get&#125;</span><br><span class="line">ActiveScopeNode               Property              Node ActiveScopeNode () &#123;get&#125; &#123;set&#125;</span><br><span class="line">Columns                       Property              Columns Columns () &#123;get&#125;</span><br><span class="line">ControlObject                 Property              IDispatch ControlObject () &#123;get&#125;</span><br><span class="line">Document                      Property              Document Document () &#123;get&#125;</span><br><span class="line">Frame                         Property              Frame Frame () &#123;get&#125;</span><br><span class="line">ListItems                     Property              Nodes ListItems () &#123;get&#125;</span><br><span class="line">ListViewMode                  Property              ListViewMode ListViewMode () &#123;get&#125; &#123;set&#125;</span><br><span class="line">Memento                       Property              string Memento () &#123;get&#125;</span><br><span class="line">ScopeTreeVisible              Property              int ScopeTreeVisible () &#123;get&#125; &#123;set&#125;</span><br><span class="line">Selection                     Property              Nodes Selection () &#123;get&#125;</span><br><span class="line">SelectionContextMenu          Property              ContextMenu SelectionContextMenu () &#123;get&#125;</span><br><span class="line">StatusBarText                 Property              string StatusBarText () &#123;set&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>method to be called for command injection is <strong>ExecuteShellCommand</strong></p>
+<img src="/2018/06/27/DCOM/dcom2.PNG">
+</li>
+<li><p>this method can be execute via network , but need admin access to other computer.</p>
+</li>
+<li>for example you can execute from client machine with domain admin privilege to domain controller .</li>
+</ul>
+<h4 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h4><blockquote>
+<p><a href="https://enigma0x3.net/2017/01/23/lateral-movement-via-dcom-round-2/" target="_blank" rel="noopener">https://enigma0x3.net/2017/01/23/lateral-movement-via-dcom-round-2/</a></p>
+</blockquote>
+<blockquote>
+<p><a href="https://technet.microsoft.com/en-us/library/cc181199.aspx?f=255&amp;MSPPError=-2147217396" target="_blank" rel="noopener">https://technet.microsoft.com/en-us/library/cc181199.aspx?f=255&amp;MSPPError=-2147217396</a></p>
+</blockquote>
+<blockquote>
+<p><a href="https://enigma0x3.net/2017/01/05/lateral-movement-using-the-mmc20-application-com-object/" target="_blank" rel="noopener">https://enigma0x3.net/2017/01/05/lateral-movement-using-the-mmc20-application-com-object/</a></p>
+</blockquote>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">AllIHave</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Diggin’-aroung-DCOM-Distributed-Component-Object-Model"><span class="toc-number">1.</span> <span class="toc-text">Diggin’ aroung DCOM (Distributed Component Object Model)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Protocol-Stack"><span class="toc-number">1.1.</span> <span class="toc-text">Protocol Stack</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Protocol-Overview"><span class="toc-number">1.2.</span> <span class="toc-text">Protocol Overview</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DCOM-Lateral-Movement"><span class="toc-number">1.3.</span> <span class="toc-text">DCOM Lateral Movement</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Why-dcom"><span class="toc-number">1.3.1.</span> <span class="toc-text">Why dcom??</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#prerequisite"><span class="toc-number">1.3.2.</span> <span class="toc-text">prerequisite</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MMC20-application"><span class="toc-number">1.3.3.</span> <span class="toc-text">MMC20.application</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Enumerating-methdo-of-MMC2-application"><span class="toc-number">1.3.4.</span> <span class="toc-text">Enumerating methdo of MMC2.application</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Ref"><span class="toc-number">1.3.5.</span> <span class="toc-text">Ref</span></a></li></ol></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2018/06/27/DCOM/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2018/06/27/DCOM/&text=DCOM"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2018/06/27/DCOM/&title=DCOM"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2018/06/27/DCOM/&is_video=false&description=DCOM"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=DCOM&body=Check out this article: http://yoursite.com/2018/06/27/DCOM/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2018/06/27/DCOM/&title=DCOM"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2018/06/27/DCOM/&title=DCOM"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2018/06/27/DCOM/&title=DCOM"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2018/06/27/DCOM/&title=DCOM"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2018/06/27/DCOM/&name=DCOM&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Kyaw Thiha
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">AllIHave</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+

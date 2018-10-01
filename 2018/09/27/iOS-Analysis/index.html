@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="kth&#39;s lab">
 <meta property="og:description" content="iOS Analysis CheatsheetInsecure Data StorageData Plist info   12[needle] &amp;gt; use storage/data/files_plist[needle] &amp;gt; run  cookies  [needle] &amp;gt; use storage/data/fiels_binarycookies   cache db   [n">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-27T16:04:21.747Z">
+<meta property="og:updated_time" content="2018-10-01T05:04:19.096Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS Analysis">
 <meta name="twitter:description" content="iOS Analysis CheatsheetInsecure Data StorageData Plist info   12[needle] &amp;gt; use storage/data/files_plist[needle] &amp;gt; run  cookies  [needle] &amp;gt; use storage/data/fiels_binarycookies   cache db   [n">
@@ -97,7 +97,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#iOS-Analysis-Cheatsheet"><span class="toc-number">1.</span> <span class="toc-text">iOS Analysis Cheatsheet</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Insecure-Data-Storage"><span class="toc-number">1.0.1.</span> <span class="toc-text">Insecure Data Storage</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Data"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">Data</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Log"><span class="toc-number">1.0.1.2.</span> <span class="toc-text">Log</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Authentication"><span class="toc-number">1.0.2.</span> <span class="toc-text">Authentication</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Local-Authentication-bypass"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">Local Authentication bypass</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Network-API"><span class="toc-number">1.0.3.</span> <span class="toc-text">Network API</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#iOS-Analysis-Cheatsheet"><span class="toc-number">1.</span> <span class="toc-text">iOS Analysis Cheatsheet</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Insecure-Data-Storage"><span class="toc-number">1.1.</span> <span class="toc-text">Insecure Data Storage</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Data"><span class="toc-number">1.1.1.</span> <span class="toc-text">Data</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Log"><span class="toc-number">1.1.2.</span> <span class="toc-text">Log</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Authentication"><span class="toc-number">1.2.</span> <span class="toc-text">Authentication</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Local-Authentication-bypass"><span class="toc-number">1.2.1.</span> <span class="toc-text">Local Authentication bypass</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Network-API"><span class="toc-number">1.3.</span> <span class="toc-text">Network API</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#iOS-Platform-API"><span class="toc-number">1.4.</span> <span class="toc-text">iOS Platform API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Custom-URLScheme"><span class="toc-number">1.4.1.</span> <span class="toc-text">Custom URLScheme</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Testing-WebView"><span class="toc-number">1.4.2.</span> <span class="toc-text">Testing WebView</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Code-Quality"><span class="toc-number">1.5.</span> <span class="toc-text">Code Quality</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Code-sign"><span class="toc-number">1.5.1.</span> <span class="toc-text">Code sign</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Debug-symbol"><span class="toc-number">1.5.2.</span> <span class="toc-text">Debug symbol</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Free-Security-Features"><span class="toc-number">1.5.3.</span> <span class="toc-text">Free Security Features</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#iOS-Anti-Reversing-Defenses"><span class="toc-number">1.6.</span> <span class="toc-text">iOS Anti-Reversing Defenses</span></a></li></ol></li></ol>
     </div>
   </span>
 </div>
@@ -136,7 +136,7 @@
   
 
   <div class="content" itemprop="articleBody">
-    <h1 id="iOS-Analysis-Cheatsheet"><a href="#iOS-Analysis-Cheatsheet" class="headerlink" title="iOS Analysis Cheatsheet"></a>iOS Analysis Cheatsheet</h1><h3 id="Insecure-Data-Storage"><a href="#Insecure-Data-Storage" class="headerlink" title="Insecure Data Storage"></a>Insecure Data Storage</h3><h4 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h4><ul>
+    <h1 id="iOS-Analysis-Cheatsheet"><a href="#iOS-Analysis-Cheatsheet" class="headerlink" title="iOS Analysis Cheatsheet"></a>iOS Analysis Cheatsheet</h1><h2 id="Insecure-Data-Storage"><a href="#Insecure-Data-Storage" class="headerlink" title="Insecure Data Storage"></a>Insecure Data Storage</h2><h3 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h3><ul>
 <li><p>Plist info</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[needle] &gt; use storage/data/files_plist</span><br><span class="line">[needle] &gt; run</span><br></pre></td></tr></table></figure>
 </li>
@@ -161,7 +161,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="Log"><a href="#Log" class="headerlink" title="Log"></a>Log</h4><ul>
+<h3 id="Log"><a href="#Log" class="headerlink" title="Log"></a>Log</h3><ul>
 <li><p>NSLog in Xcode </p>
 </li>
 <li><p>NSlog with socat</p>
@@ -171,7 +171,7 @@
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[needle] &gt; use dynamic/monitor/syslog </span><br><span class="line">[needle] &gt; run</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="Authentication"><a href="#Authentication" class="headerlink" title="Authentication"></a>Authentication</h3><h4 id="Local-Authentication-bypass"><a href="#Local-Authentication-bypass" class="headerlink" title="Local Authentication bypass"></a>Local Authentication bypass</h4><ul>
+<h2 id="Authentication"><a href="#Authentication" class="headerlink" title="Authentication"></a>Authentication</h2><h3 id="Local-Authentication-bypass"><a href="#Local-Authentication-bypass" class="headerlink" title="Local Authentication bypass"></a>Local Authentication bypass</h3><ul>
 <li>Swizzler</li>
 </ul>
 <ul>
@@ -179,7 +179,22 @@
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[needle] &gt; use hooking&gt;frida&gt;scipt_touch-id-bypass</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="Network-API"><a href="#Network-API" class="headerlink" title="Network API"></a>Network API</h3>
+<h2 id="Network-API"><a href="#Network-API" class="headerlink" title="Network API"></a>Network API</h2><ul>
+<li>App Transport Security</li>
+<li>Testing Custom Certificate Stores and Certificate Pinning</li>
+</ul>
+<h2 id="iOS-Platform-API"><a href="#iOS-Platform-API" class="headerlink" title="iOS Platform API"></a>iOS Platform API</h2><h3 id="Custom-URLScheme"><a href="#Custom-URLScheme" class="headerlink" title="Custom URLScheme"></a>Custom URLScheme</h3><pre><code>- strings &lt;app&gt; | grep &quot;myURLscheme://&quot;
+
+- `[needle] &gt; use dynamic/ipc/open_uri`
+</code></pre><h3 id="Testing-WebView"><a href="#Testing-WebView" class="headerlink" title="Testing WebView"></a>Testing WebView</h3><h2 id="Code-Quality"><a href="#Code-Quality" class="headerlink" title="Code Quality"></a>Code Quality</h2><h3 id="Code-sign"><a href="#Code-sign" class="headerlink" title="Code sign"></a>Code sign</h3><pre><code>- codesign -dvvv &lt;test.app&gt;
+</code></pre><h3 id="Debug-symbol"><a href="#Debug-symbol" class="headerlink" title="Debug symbol"></a>Debug symbol</h3><h3 id="Free-Security-Features"><a href="#Free-Security-Features" class="headerlink" title="Free Security Features"></a>Free Security Features</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">unzip &lt;test.ipa&gt;</span><br><span class="line">cd Payload/test.app/</span><br><span class="line">otools -hv &lt;app&gt;</span><br><span class="line">otools -Iv &lt;app&gt; |grep stack</span><br><span class="line">otools -Iv &lt;app&gt; |grep release</span><br></pre></td></tr></table></figure>
+<h2 id="iOS-Anti-Reversing-Defenses"><a href="#iOS-Anti-Reversing-Defenses" class="headerlink" title="iOS Anti-Reversing Defenses"></a>iOS Anti-Reversing Defenses</h2><ul>
+<li>Jailbreak Detection</li>
+<li>Anti-Debugging Checks</li>
+<li>File Integrity Checks</li>
+<li>Device Binding</li>
+</ul>
+
   </div>
 </article>
 
@@ -201,7 +216,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#iOS-Analysis-Cheatsheet"><span class="toc-number">1.</span> <span class="toc-text">iOS Analysis Cheatsheet</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Insecure-Data-Storage"><span class="toc-number">1.0.1.</span> <span class="toc-text">Insecure Data Storage</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Data"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">Data</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Log"><span class="toc-number">1.0.1.2.</span> <span class="toc-text">Log</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Authentication"><span class="toc-number">1.0.2.</span> <span class="toc-text">Authentication</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Local-Authentication-bypass"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">Local Authentication bypass</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Network-API"><span class="toc-number">1.0.3.</span> <span class="toc-text">Network API</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#iOS-Analysis-Cheatsheet"><span class="toc-number">1.</span> <span class="toc-text">iOS Analysis Cheatsheet</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Insecure-Data-Storage"><span class="toc-number">1.1.</span> <span class="toc-text">Insecure Data Storage</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Data"><span class="toc-number">1.1.1.</span> <span class="toc-text">Data</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Log"><span class="toc-number">1.1.2.</span> <span class="toc-text">Log</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Authentication"><span class="toc-number">1.2.</span> <span class="toc-text">Authentication</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Local-Authentication-bypass"><span class="toc-number">1.2.1.</span> <span class="toc-text">Local Authentication bypass</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Network-API"><span class="toc-number">1.3.</span> <span class="toc-text">Network API</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#iOS-Platform-API"><span class="toc-number">1.4.</span> <span class="toc-text">iOS Platform API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Custom-URLScheme"><span class="toc-number">1.4.1.</span> <span class="toc-text">Custom URLScheme</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Testing-WebView"><span class="toc-number">1.4.2.</span> <span class="toc-text">Testing WebView</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Code-Quality"><span class="toc-number">1.5.</span> <span class="toc-text">Code Quality</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Code-sign"><span class="toc-number">1.5.1.</span> <span class="toc-text">Code sign</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Debug-symbol"><span class="toc-number">1.5.2.</span> <span class="toc-text">Debug symbol</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Free-Security-Features"><span class="toc-number">1.5.3.</span> <span class="toc-text">Free Security Features</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#iOS-Anti-Reversing-Defenses"><span class="toc-number">1.6.</span> <span class="toc-text">iOS Anti-Reversing Defenses</span></a></li></ol></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
@@ -265,5 +280,3 @@
 <!-- Baidu Analytics -->
 
 <!-- Disqus Comments -->
-
-

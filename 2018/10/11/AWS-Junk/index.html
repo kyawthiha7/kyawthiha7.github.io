@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="install aws cli download and isntall aws-cli interface configure access keys  aws configure --profile NAME  Find aws s3 bucket some S3 bucket use as website.  12dig flaws.cloudhost 51.x.x.x list bucke">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AWS-Junk">
+<meta property="og:url" content="http://yoursite.com/2018/10/11/AWS-Junk/index.html">
+<meta property="og:site_name" content="kth&#39;s lab">
+<meta property="og:description" content="install aws cli download and isntall aws-cli interface configure access keys  aws configure --profile NAME  Find aws s3 bucket some S3 bucket use as website.  12dig flaws.cloudhost 51.x.x.x list bucke">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-10-11T08:53:45.534Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AWS-Junk">
+<meta name="twitter:description" content="install aws cli download and isntall aws-cli interface configure access keys  aws configure --profile NAME  Find aws s3 bucket some S3 bucket use as website.  12dig flaws.cloudhost 51.x.x.x list bucke">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>AWS-Junk</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">AllIHave</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2018/10/03/Certificate-Pinning-Bypass-iOS/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2018/10/11/AWS-Junk/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2018/10/11/AWS-Junk/&text=AWS-Junk"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2018/10/11/AWS-Junk/&title=AWS-Junk"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2018/10/11/AWS-Junk/&is_video=false&description=AWS-Junk"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=AWS-Junk&body=Check out this article: http://yoursite.com/2018/10/11/AWS-Junk/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2018/10/11/AWS-Junk/&title=AWS-Junk"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2018/10/11/AWS-Junk/&title=AWS-Junk"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2018/10/11/AWS-Junk/&title=AWS-Junk"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2018/10/11/AWS-Junk/&title=AWS-Junk"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2018/10/11/AWS-Junk/&name=AWS-Junk&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#install-aws-cli"><span class="toc-number">1.</span> <span class="toc-text">install aws cli</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Find-aws-s3-bucket"><span class="toc-number">2.</span> <span class="toc-text">Find aws s3 bucket</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#list-bucket-public-or-not"><span class="toc-number">3.</span> <span class="toc-text">list bucket public or not</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sync-bucket"><span class="toc-number">4.</span> <span class="toc-text">sync bucket</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AWS-Get-profile"><span class="toc-number">5.</span> <span class="toc-text">AWS Get profile</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AWS-mount"><span class="toc-number">6.</span> <span class="toc-text">AWS mount</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        AWS-Junk
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">kth's lab</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-10-11T08:52:57.000Z" itemprop="datePublished">2018-10-11</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="install-aws-cli"><a href="#install-aws-cli" class="headerlink" title="install aws cli"></a>install aws cli</h2><ul>
+<li>download and isntall aws-cli interface</li>
+<li>configure access keys<br>  <code>aws configure --profile NAME</code></li>
+</ul>
+<h2 id="Find-aws-s3-bucket"><a href="#Find-aws-s3-bucket" class="headerlink" title="Find aws s3 bucket"></a>Find aws s3 bucket</h2><ul>
+<li>some S3 bucket use as website.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dig flaws.cloud</span><br><span class="line">host 51.x.x.x</span><br></pre></td></tr></table></figure>
+<h2 id="list-bucket-public-or-not"><a href="#list-bucket-public-or-not" class="headerlink" title="list bucket public or not"></a>list bucket public or not</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">aws s3 ls  s3://flaws.cloud/ --no-sign-request --region us-west-2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">aws s3 --profile kth ls s3://level2-c8b217a33fcf1f839f6f1f73a00a9ae7.flaws.cloud</span><br></pre></td></tr></table></figure>
+<h2 id="sync-bucket"><a href="#sync-bucket" class="headerlink" title="sync bucket"></a>sync bucket</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aws s3 sync s3://level3-9afd3927f195e10225021a578e6f78df.flaws.cloud/ . --no-sign-request --region us-west-2</span><br></pre></td></tr></table></figure>
+<h2 id="AWS-Get-profile"><a href="#AWS-Get-profile" class="headerlink" title="AWS Get profile"></a>AWS Get profile</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">aws s3 --profile kth sts get-caller-identity</span><br><span class="line"></span><br><span class="line">aws --profile flaws  ec2 describe-snapshots --owner-id XXXXXXXX</span><br></pre></td></tr></table></figure>
+<h2 id="AWS-mount"><a href="#AWS-mount" class="headerlink" title="AWS mount"></a>AWS mount</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aws --profile YOUR_ACCOUNT ec2 create-volume --availability-zone us-west-2a --region us-west-2  --snapshot-id  snap-0b49342abd1bdcb89</span><br></pre></td></tr></table></figure>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">AllIHave</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#install-aws-cli"><span class="toc-number">1.</span> <span class="toc-text">install aws cli</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Find-aws-s3-bucket"><span class="toc-number">2.</span> <span class="toc-text">Find aws s3 bucket</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#list-bucket-public-or-not"><span class="toc-number">3.</span> <span class="toc-text">list bucket public or not</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sync-bucket"><span class="toc-number">4.</span> <span class="toc-text">sync bucket</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AWS-Get-profile"><span class="toc-number">5.</span> <span class="toc-text">AWS Get profile</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AWS-mount"><span class="toc-number">6.</span> <span class="toc-text">AWS mount</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2018/10/11/AWS-Junk/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2018/10/11/AWS-Junk/&text=AWS-Junk"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2018/10/11/AWS-Junk/&title=AWS-Junk"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2018/10/11/AWS-Junk/&is_video=false&description=AWS-Junk"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=AWS-Junk&body=Check out this article: http://yoursite.com/2018/10/11/AWS-Junk/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2018/10/11/AWS-Junk/&title=AWS-Junk"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2018/10/11/AWS-Junk/&title=AWS-Junk"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2018/10/11/AWS-Junk/&title=AWS-Junk"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2018/10/11/AWS-Junk/&title=AWS-Junk"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2018/10/11/AWS-Junk/&name=AWS-Junk&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Kyaw Thiha
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">AllIHave</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
